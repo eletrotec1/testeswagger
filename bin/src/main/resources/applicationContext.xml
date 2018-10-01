@@ -25,7 +25,7 @@
     </bean>
     
     <fss:oauth>
-        <fss:oauthInfo endpoint="http://login.salesforce.com"
+        <fss:oauthInfo endpoint="http://eletrotec1-dev-ed.my.salesforce.com"
                        oauth-key="#{systemEnvironment['OAUTH_CLIENT_KEY']}"
                        oauth-secret="#{systemEnvironment['OAUTH_CLIENT_SECRET']}"/>
     </fss:oauth>

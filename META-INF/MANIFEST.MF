@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Com-swagger-rest-spring-mvc-heroku
+Bundle-SymbolicName: testSwagger
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.example.controller,
+ com.example.controller.api,
+ com.example.main,
+ com.example.model,
+ com.example.service

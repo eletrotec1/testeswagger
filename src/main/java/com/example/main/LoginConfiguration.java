@@ -17,8 +17,17 @@ public class LoginConfiguration {
 	
 	@Bean
 	public ForceApi loginToSalesforce(){
-		if (environment.getProperty("SALESFORCEUSERNAME")!=null && environment.getProperty("SALESFORCEPASSWORD")!=null)
-			return new ForceApi(new ApiConfig().setUsername(environment.getProperty("SALESFORCEUSERNAME")).setPassword(environment.getProperty("SALESFORCEPASSWORD")));
+		System.out.println("#### Username: " + environment.getProperty("SALESFORCEUSERNAME"));
+		System.out.println("#### Password: " + environment.getProperty("SALESFORCEPASSWORD"));
+		if (environment.getProperty("SALESFORCEUSERNAME")!=null && environment.getProperty("SALESFORCEPASSWORD")!=null) {
+			
+			ApiConfig lApiConfig = new ApiConfig().setUsername(environment.getProperty("SALESFORCEUSERNAME")).setPassword(environment.getProperty("SALESFORCEPASSWORD"));
+			System.out.println("#### lApiConfig: " + lApiConfig);
+			
+			ForceApi lForceAPI = new ForceApi(lApiConfig);
+			System.out.println("#### lForceAPI: " + lForceAPI);
+			return lForceAPI;			
+		}
 		return null;
 	}
 

@@ -11,7 +11,10 @@ public class Main {
 	public static void main(String[] args) {
 		try{
 			AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-	        applicationContext.getEnvironment().setActiveProfiles("default");
+			System.out.println("#### default: ");
+			applicationContext.getEnvironment().setActiveProfiles("default");
+			System.out.println("#### PackageName1: ");
+			System.out.println("#### PackageName2: " + LoginConfiguration.class.getPackage().getName());
 	        applicationContext.scan(LoginConfiguration.class.getPackage().getName());
 	        applicationContext.refresh();
 			     

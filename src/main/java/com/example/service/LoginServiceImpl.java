@@ -10,13 +10,13 @@ import com.force.sdk.oauth.context.SecurityContext;
 @Service
 public class LoginServiceImpl implements LoginService {
 
-	@Override
 	public ForceApi getForceApi() {
 		SecurityContext sc = ForceSecurityContextHolder.get();
 
         ApiSession s = new ApiSession();
         s.setAccessToken(sc.getSessionId());
-        s.setApiEndpoint(sc.getEndPointHost());
+        System.out.println("#### getEndPointHost: " + sc.getEndPointHost());
+        s.setApiEndpoint("https://login.salesforce.com//services/Soap/u/43.0");//sc.getEndPointHost());
 
         return new ForceApi(s);
 	}
