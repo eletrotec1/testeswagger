@@ -16,7 +16,7 @@ public class LoginServiceImpl implements LoginService {
         ApiSession s = new ApiSession();
         s.setAccessToken(sc.getSessionId());
         System.out.println("#### getEndPointHost: " + sc.getEndPointHost());
-        s.setApiEndpoint("https://login.salesforce.com//services/Soap/u/43.0");//sc.getEndPointHost());
+        s.setApiEndpoint(sc.getEndPointHost());
 
         return new ForceApi(s);
 	}
