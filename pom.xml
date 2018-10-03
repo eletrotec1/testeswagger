@@ -53,7 +53,7 @@
         <dependency>
 		    <groupId>com.frejo</groupId>
 		    <artifactId>force-rest-api</artifactId>
-		    <version>0.0.26</version>
+		    <version>0.0.40</version>
 		</dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
