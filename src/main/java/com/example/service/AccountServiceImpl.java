@@ -21,7 +21,7 @@ public class AccountServiceImpl implements AccountService{
 
 	@Override
 	public Account findAccountById(String accountToFind) {
-		return loginService.getForceApi().getSObject("account", accountToFind).as(Account.class);
+		return loginService.getForceApi().getSObject("Account", accountToFind).as(Account.class);
 	}
 
 	@Override
